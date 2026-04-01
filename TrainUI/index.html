@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RailFinder — Train Search</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="app-shell">
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <button class="back-btn">&#8592;</button>
+      <span class="top-title">Train Search Application</span>
+      <!-- <div class="top-actions">
+        <button class="top-btn active">Preview</button>
+        <button class="top-btn">Code</button>
+        <span class="top-btn close-btn">&#10005;</span>
+      </div> -->
+    </div>
+
+    <!-- Scrollable Content -->
+    <div class="content">
+
+      <!-- Brand -->
+      <div class="brand">
+        <div class="brand-icon-wrap">🚃</div>
+        <span class="brand-name">RailFinder</span>
+      </div>
+
+      <!-- Search Card -->
+      <div class="card">
+        <h1 class="card-title">Find Your Train</h1>
+
+        <div class="form-group">
+          <label class="form-label">From Station (Code)</label>
+          <div class="input-wrap">
+            <span class="input-prefix">🚉</span>
+            <input type="text" id="sourceCode" class="form-input" placeholder="e.g. NDLS" maxlength="6"/>
+          </div>
+        </div>
+
+        <div class="swap-row">
+          <div class="swap-line"></div>
+          <button class="swap-btn" id="swapBtn">⇅</button>
+          <div class="swap-line"></div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">To Station (Code)</label>
+          <div class="input-wrap">
+            <span class="input-prefix">📍</span>
+            <input type="text" id="destinationCode" class="form-input" placeholder="e.g. CST" maxlength="6"/>
+          </div>
+        </div>
+
+        <div class="error-msg" id="errorMsg"></div>
+
+        <button class="search-btn" id="searchBtn">
+          <span id="btnText">Search Trains</span>
+          <span class="btn-loader" id="btnLoader"></span>
+        </button>
+      </div>
+
+      <!-- Status -->
+      <div class="status-tag" id="statusTag"></div>
+
+      <!-- Results -->
+      <div id="results"></div>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
